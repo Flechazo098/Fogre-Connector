@@ -1,0 +1,19 @@
+{
+  "resourcelocation_transformer": {
+    "target": {
+      "type": "CLASS",
+      "name": "net.minecraft.resources.ResourceLocation"
+    },
+    "transformer": "com.flechazo.forge_connector.asm.ResourceLocationTransformer"
+  },
+  "mod_constructor_transformer": {
+    "target": {
+      "type": "CLASS",
+      "predicate": {
+        "type": "ANNOTATION",
+        "annotation": "net.minecraftforge.fml.common.Mod"
+      }
+    },
+    "transformer": "com.flechazo.forge_connector.asm.ModConstructorTransformer"
+  }
+}

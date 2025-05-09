@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.flechazo.forge_connector.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "forge_connector.refmap.json",
+  "mixins": [
+    "ResourceLocationMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
