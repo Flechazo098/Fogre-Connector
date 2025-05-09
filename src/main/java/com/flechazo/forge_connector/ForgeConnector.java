@@ -13,17 +13,17 @@ public class ForgeConnector {
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // 添加静态初始化块，尽早注册CoreMod
-    static {
-        LOGGER.info("ForgeConnector静态初始化块执行");
-        try {
-            // 手动触发服务加载
-            Class.forName("com.flechazo.forge_connector.asm.ForgeConnectorTransformationService");
-            LOGGER.info("已手动加载ForgeConnectorTransformationService");
-        } catch (Exception e) {
-            LOGGER.error("手动加载ForgeConnectorTransformationService失败", e);
-        }
-    }
+//    // 添加静态初始化块，尽早注册CoreMod
+//    static {
+//        LOGGER.info("ForgeConnector静态初始化块执行");
+//        try {
+//            // 手动触发服务加载
+//            Class.forName("com.flechazo.forge_connector.asm.ForgeConnectorTransformationService");
+//            LOGGER.info("已手动加载ForgeConnectorTransformationService");
+//        } catch (Exception e) {
+//            LOGGER.error("手动加载ForgeConnectorTransformationService失败", e);
+//        }
+//    }
 
     public ForgeConnector() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

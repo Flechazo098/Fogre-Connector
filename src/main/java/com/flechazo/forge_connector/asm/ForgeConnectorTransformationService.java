@@ -20,9 +20,9 @@ public class ForgeConnectorTransformationService implements ITransformationServi
             ICoreModProvider coreModProvider = FMLLoader.getCoreModProvider();
             if (coreModProvider != null) {
                 System.out.println("[ForgeConnector DEBUG] CoreModProvider obtained successfully.");
+                // 注册主CoreMod文件
                 coreModProvider.addCoreMod(new ForgeConnectorCoreModFile());
-                // 注意：addCoreMod本身不返回状态，成功与否需要看后续CoreMod是否工作
-                System.out.println("[ForgeConnector DEBUG] Call to coreModProvider.addCoreMod(new ForgeConnectorCoreModFile()) completed.");
+                System.out.println("[ForgeConnector DEBUG] Main CoreMod file registered successfully.");
             } else {
                 // 使用 System.err 来突出显示错误信息
                 System.err.println("[ForgeConnector CRITICAL] Failed to get CoreModProvider. CoreMod will NOT be loaded. This is a critical issue.");
